@@ -82,7 +82,7 @@ def main():
     # 引数がなければデフォルト出力パスにファイルを出力
     output_file_path = sys.argv[3] if len(sys.argv) >= 4 else DEFAULT_OUTPUT_FILE_PATH
     # 引数がなければヘッダーありとみなす
-    is_header = bool(sys.argv[4]) if len(sys.argv) >= 5 else True
+    is_header = bool(int(sys.argv[4])) if len(sys.argv) >= 5 else True
 
     encoding = get_encoding(input_file_path)
     input_rows, header = get_input_rows_and_header(input_file_path, encoding, is_header)
